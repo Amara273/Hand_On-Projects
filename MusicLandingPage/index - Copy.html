@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <img src="Music_logo.png" alt="Product Logo" id="header-img">
+        <nav id="nav-bar">
+            <ul>
+                <li><a href="#section1" class="nav-link">Home</a></li>
+                <li><a href="#section2" class="nav-link">About</a></li>
+                <li><a href="#section3" class="nav-link">Music</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Sections -->
+    <section id="section1">
+        <h2>Billie Ellish's Music</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREDsPlAy38UUvuD-NWLUJfQIESJgKFajtFkA&s">
+        <p>Discover the latest hit from <strong>Billie Ellish, BIRDS OF THE FEATHER</strong>. 
+        Enjoy and share the music with the world.</p>
+    </section>
+
+    <section id="section2">
+        <h2>About the song</h2>
+        <p><strong>"Birds of a Feather"</strong> by <strong>Billie Eilish</strong> and Finneas is a hauntingly beautiful song about intense, unconditional love and emotional dependency. The lyrics depict a relationship so deep that the narrator feels they are inseparable from their partner, even to the point of death. The recurring line "Birds of a feather, we should stick together" symbolizes the bond between the two, much like how birds of the same kind naturally stick together inseparable and perfectly matched.</p>
+    </section>
+
+    <section id="section3">
+        <h2>Lyrics</h2>
+        <p>I want you to stay
+            'Til I'm in the grave
+            'Til I rot away, dead and buried
+            'Til I'm in the casket you carry
+            If you go, I'm going too, uh
+            'Cause it was always you, alright
+            And if I'm turning blue, please don't save me
+            Nothing left to lose without my baby
+            Birds of a feather, we should stick together, I know
+            I said I'd never think I wasn't better alone
+            Can't change the weather, might not be forever
+            But if it's forever, it's even better
+            And I don't know what I'm crying for
+            I don't think I could love you more
+            It might not be long, but baby, I
+            I'll love you 'til the day that I die
+            'Til the day that I die
+            'Til the light leaves my eyes
+            'Til the day that I die
+            I want you to see, hm
+            How you look to me, hm
+            You wouldn't believe if I told ya
+            You would keep the compliments I throw ya
+            But you're so full of shit, uh
+            Tell me it's a bit, oh
+            Say you don't see it, your mind's polluted
+            Say you wanna quit, don't be stupid
+            And I don't know what I'm crying for
+            I don't think I could love you more
+            Might not be long, but baby, I
+            Don't wanna say goodbye
+            Birds of a feather, we should stick together, I know ('til the day that I die)
+            I said I'd never think I wasn't better alone ('til the light leaves my eyes)
+            Can't change the weather, might not be forever ('til the day that I die)
+            But if it's forever, it's even better
+            I knew you in another life
+            You had that same look in your eyes
+            I love you, don't act so surprised</p>
+    </section>
+
+    <!-- Product Video Section -->
+    <section class="video-section">
+        <h2>Watch The Music Video</h2>
+        <iframe id="video" width="560" height="315" src="BIRDS OF THE FEATHER" frameborder="0" allowfullscreen="autoplay; encrypted-media"></iframe>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section">
+        <h2>Subscribe for Updates</h2>
+        <form id="form" action="https://www.freecodecamp.com/email-submit" method="POST">
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <input type="submit" id="submit" value="Subscribe">
+        
+        </form>
+    </section>
+    <script>
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-video', {
+                videoId: 'YOUR_VIDEO_ID',
+                playerVars: {
+                    autoplay: 1
+                },
+                events: {
+                    onReady: onPlayerReady
+                }
+            });
+        }
+    
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+    </script>
+
+    <footer>
+        <p>© 2025 World of Music</p>
+    </footer>
+</body>
+</html>
+
